@@ -55,7 +55,7 @@ GenerateClassCluster=0
 DocumentUniqueId=EHGKMPGH
 
 [Document2]
-DocumentPath=F103C8核心板--封装定位图纸.PcbDoc
+DocumentPath=mylib.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -69,7 +69,24 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=HOVIDERH
+DocumentUniqueId=CZRNPKTD
+
+[Document3]
+DocumentPath=mylib.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=MEVPOTNF
 
 [Configuration1]
 Name=Sources
