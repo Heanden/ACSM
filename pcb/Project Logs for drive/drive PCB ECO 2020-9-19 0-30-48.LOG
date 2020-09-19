@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=PC13 Pin=S1-2
+Added Pin To Net: NetName=PC13 Pin=S1-2
+Added Pin To Net: NetName=PC13 Pin=S4-2
+Added Pin To Net: NetName=PC13 Pin=S4-2
+Added Member To Class: ClassName=drive Member=Component R4 Res2
+Added Room: Name=drive

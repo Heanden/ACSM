@@ -44,7 +44,7 @@ AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=0
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -55,7 +55,7 @@ GenerateClassCluster=0
 DocumentUniqueId=EHGKMPGH
 
 [Document2]
-DocumentPath=mylib.SchLib
+DocumentPath=drive.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -69,24 +69,11 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=CZRNPKTD
+DocumentUniqueId=CSOTDSDV
 
-[Document3]
-DocumentPath=mylib.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
+[GeneratedDocument1]
+DocumentPath=Project Outputs for drive\Design Rule Check - drive.html
 DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=MEVPOTNF
 
 [Configuration1]
 Name=Sources

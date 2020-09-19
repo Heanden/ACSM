@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=PB15 Pin=P1-1
+Removed Pin From Net: NetName=PA8 Pin=P1-2
+Removed Pin From Net: NetName=TXD1 Pin=P1-3
+Removed Pin From Net: NetName=RXD1 Pin=P1-4
+Removed Pin From Net: NetName=PA11 Pin=P1-5
+Removed Pin From Net: NetName=PA12 Pin=P1-6
+Added Pin To Net: NetName=PB13 Pin=P1-1
+Added Pin To Net: NetName=PB14 Pin=P1-2
+Added Pin To Net: NetName=PB15 Pin=P1-3
+Added Pin To Net: NetName=PA8 Pin=P1-4
+Added Pin To Net: NetName=TXD1 Pin=P1-5
+Added Pin To Net: NetName=RXD1 Pin=P1-6
+Added Room: Name=drive
