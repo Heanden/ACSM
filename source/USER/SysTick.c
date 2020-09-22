@@ -19,7 +19,7 @@ void SysTick_Init(void)
 	 * SystemCoreClock / 100000	 10us中断一次
 	 * SystemCoreClock / 1000000 1us中断一次
 	 */
-  if (SysTick_Config(SystemCoreClock / 100000))
+  if (SysTick_Config(SystemCoreClock))
   {
     /* Capture error */
     while (1)
@@ -39,6 +39,7 @@ void Delay_us(__IO u32 nTime)
 /* 获取节拍程序，在 SysTick 中断函数 SysTick_Handler()调用	 */
 void TimingDelay_Decrement(void)
 {
+  secOnes++;
   if (TimingDelay != 0x00)
   {
     TimingDelay--;

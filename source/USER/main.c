@@ -46,5 +46,39 @@ int main(void)
         default:
             break;
         }
-    }
+
+        if (secOnes > 9)
+        {
+            secOnes = 0;
+            secTens++;
+        }
+
+        if (secTens > 5)
+        {
+            secTens = 0;
+            minOnes++;
+        }
+        if (minOnes > 9)
+        {
+            minOnes = 0;
+            minTens++;
+        }
+
+        if (secTens > 5)
+        {
+            secOnes = 0;
+            secOnes++;
+        }
+        if (secOnes > 9)
+        {
+            secOnes = 0;
+            secOnes++;
+        }
+
+        if (secTens > 5)
+        {
+            secOnes = 0;
+            secOnes++;
+        }
+    } //循环
 }
