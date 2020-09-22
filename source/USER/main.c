@@ -1,16 +1,15 @@
 #include "stm32f10x.h"
 #include "key.h"
+#include "leddt.h"
+#include "buzzer.h"
+#include "led.h"
 
 int main(void)
 {
     int topMenu = 1, setCase = 1, posCase = 1, addCommand = 0, subCommand = 0, enterCommand = 0;
     SystemInit();
-    Key_GPIO_Config(GPIO_Pin_14, GPIO_Mode_Out_PP, RCC_APB2Periph_GPIOC, GPIOC); //PC14,推挽输出
-    Key_GPIO_Config(GPIO_Pin_1, GPIO_Mode_Out_PP, RCC_APB2Periph_GPIOA, GPIOA);  //PA1,推挽输出
-    Key_GPIO_Config(GPIO_Pin_13, GPIO_Mode_IPD, RCC_APB2Periph_GPIOC, GPIOC);    //PC13,下拉输入
-    Key_GPIO_Config(GPIO_Pin_15, GPIO_Mode_IPD, RCC_APB2Periph_GPIOC, GPIOC);    //PC15,下拉输入
-    Key_GPIO_Config(GPIO_Pin_0, GPIO_Mode_IPD, RCC_APB2Periph_GPIOA, GPIOA);     //PA0,下拉输入
-
+    keyConfig();
+    leddtGpioConfig();
     int keyValue = 0;
     while (1)
     {
@@ -47,7 +46,5 @@ int main(void)
         default:
             break;
         }
-
-        
     }
 }

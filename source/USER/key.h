@@ -19,5 +19,6 @@
 
 void Key_GPIO_Config(u16 GPIO_Pin_x, u16 GPIOMode, u32 RCC_APB2Periph_GPIOx, GPIO_TypeDef *GPIOx);
 u8 Key_Scan(void);
+void keyConfig(void);
 
-#endif /* __LED_H */
+#endif /* __KEY_H */

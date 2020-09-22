@@ -28,6 +28,14 @@ void Key_GPIO_Config(u16 GPIO_Pin_x, u16 GPIOMode, u32 RCC_APB2Periph_GPIOx, GPI
 	GPIO_Init(GPIOx, &GPIO_InitStructure);	 //初始化端口
 }
 
+void keyConfig(void)
+{
+	Key_GPIO_Config(GPIO_Pin_14, GPIO_Mode_Out_PP, RCC_APB2Periph_GPIOC, GPIOC); //PC14,推挽输出
+	Key_GPIO_Config(GPIO_Pin_1, GPIO_Mode_Out_PP, RCC_APB2Periph_GPIOA, GPIOA);	 //PA1,推挽输出
+	Key_GPIO_Config(GPIO_Pin_13, GPIO_Mode_IPD, RCC_APB2Periph_GPIOC, GPIOC);	 //PC13,下拉输入
+	Key_GPIO_Config(GPIO_Pin_15, GPIO_Mode_IPD, RCC_APB2Periph_GPIOC, GPIOC);	 //PC15,下拉输入
+	Key_GPIO_Config(GPIO_Pin_0, GPIO_Mode_IPD, RCC_APB2Periph_GPIOA, GPIOA);	 //PA0,下拉输入
+}
 /* 检测是否有按键按下 */ //GPIO_ReadInputDataBit
 u8 Key_Scan(void)
 {
