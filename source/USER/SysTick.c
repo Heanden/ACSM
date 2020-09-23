@@ -11,6 +11,9 @@
 #include "SysTick.h"
 
 static __IO u32 TimingDelay;
+__IO u8 secOnes = 0;
+__IO u8 stopWatchMark = 0;
+__IO u8 stopWatch_secOnes = 0;
 
 /*初始化  SysTick*/
 void SysTick_Init(void)
@@ -40,6 +43,21 @@ void Delay_us(__IO u32 nTime)
 void TimingDelay_Decrement(void)
 {
   secOnes++;
+  switch (stopWatchMark)
+  {
+  case 0: /*秒表转态为0复位状态*/
+    stopWatch_secOnes = 0;
+    break;
+
+  case 1: /*秒表转态1为开始计时，即开始累加*/
+    stopWatch_secOnes++;
+    break;
+
+    /*秒表转态2为暂停计时，即不累加，在default体现*/
+
+  default:
+    break;
+  }
   if (TimingDelay != 0x00)
   {
     TimingDelay--;

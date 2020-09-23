@@ -31,11 +31,11 @@ void pushDigital(int firstHigh, int secondHigh, int firstLow, int secondLow)
     {
         if (firstHigh < 0)
             leddtData = (0x0 << 24) | (CCCode[firstLow] << 16) | (CCCode[secondHigh] << 8) | (CCCode[secondLow]);
-        else if (firstLow < 0)
+        if (firstLow < 0)
             leddtData = (CCCode[firstHigh] << 24) | (0x0 << 16) | (CCCode[secondHigh] << 8) | (CCCode[secondLow]);
-        else if (secondHigh < 0)
+        if (secondHigh < 0)
             leddtData = (CCCode[firstHigh] << 24) | (CCCode[firstLow] << 16) | (0x0 << 8) | (CCCode[secondLow]);
-        else if (secondLow < 0)
+        if (secondLow < 0)
             leddtData = (CCCode[firstHigh] << 24) | (CCCode[firstLow] << 16) | (CCCode[secondHigh] << 8) | (0x0);
     }
 
@@ -64,5 +64,6 @@ void pushDigital(int firstHigh, int secondHigh, int firstLow, int secondLow)
             GPIO_ResetBits(GPIOB, GPIO_Pin_8);
             GPIO_SetBits(GPIOB, GPIO_Pin_8);
         }
+		leddtData = leddtData << 1;
     }
 }

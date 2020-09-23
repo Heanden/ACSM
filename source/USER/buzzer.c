@@ -13,9 +13,3 @@ void leddtGpioConfig(void)
 
     GPIO_SetBits(GPIOB, GPIO_Pin_1);
 }
-
-void playVoice(u8 voiceMark)
-{
-    if (voiceMark > 0)
-        GPIO_ResetBits(GPIOB, GPIO_Pin_1);
-}

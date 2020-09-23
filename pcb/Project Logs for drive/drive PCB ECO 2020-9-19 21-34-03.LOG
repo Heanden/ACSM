@@ -1,6 +1,0 @@
-Added Pin To Net: NetName=clk Pin=J3-2
-Added Pin To Net: NetName=PB9 Pin=U2-1
-Added Pin To Net: NetName=PB9 Pin=U2-2
-Change Net Name : Old Net Name=clk New Net Name=PB8
-Added Member To Class: ClassName=drive Member=Component U4 SN74HC164N
-Added Room: Name=drive

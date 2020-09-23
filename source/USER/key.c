@@ -30,77 +30,74 @@ void Key_GPIO_Config(u16 GPIO_Pin_x, u16 GPIOMode, u32 RCC_APB2Periph_GPIOx, GPI
 
 void keyConfig(void)
 {
-	Key_GPIO_Config(GPIO_Pin_14, GPIO_Mode_Out_PP, RCC_APB2Periph_GPIOC, GPIOC); //PC14,推挽输出
-	Key_GPIO_Config(GPIO_Pin_1, GPIO_Mode_Out_PP, RCC_APB2Periph_GPIOA, GPIOA);	 //PA1,推挽输出
-	Key_GPIO_Config(GPIO_Pin_13, GPIO_Mode_IPD, RCC_APB2Periph_GPIOC, GPIOC);	 //PC13,下拉输入
-	Key_GPIO_Config(GPIO_Pin_15, GPIO_Mode_IPD, RCC_APB2Periph_GPIOC, GPIOC);	 //PC15,下拉输入
-	Key_GPIO_Config(GPIO_Pin_0, GPIO_Mode_IPD, RCC_APB2Periph_GPIOA, GPIOA);	 //PA0,下拉输入
+	Key_GPIO_Config(GPIO_Pin_14, GPIO_Mode_IPD, RCC_APB2Periph_GPIOC, GPIOC);	 //PC14,下拉输入
+	Key_GPIO_Config(GPIO_Pin_1, GPIO_Mode_IPD, RCC_APB2Periph_GPIOA, GPIOA);	 //PA1,下拉输入
+	Key_GPIO_Config(GPIO_Pin_13, GPIO_Mode_Out_PP, RCC_APB2Periph_GPIOC, GPIOC); //PC13,推挽输出
+	Key_GPIO_Config(GPIO_Pin_15, GPIO_Mode_Out_PP, RCC_APB2Periph_GPIOC, GPIOC); //PC15,推挽输出
+	Key_GPIO_Config(GPIO_Pin_0, GPIO_Mode_Out_PP, RCC_APB2Periph_GPIOA, GPIOA);	 //PA0,推挽输出
 }
 /* 检测是否有按键按下 */ //GPIO_ReadInputDataBit
 u8 Key_Scan(void)
 {
-	GPIO_SetBits(GPIOC, GPIO_Pin_14);
-	GPIO_setBits(GPIOA, GPIO_Pin_1);
-	if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) | GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_15) | GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == KEY_OFF)
+	GPIO_ResetBits(GPIOC, GPIO_Pin_13);
+	GPIO_SetBits(GPIOC, GPIO_Pin_15);
+	GPIO_SetBits(GPIOA, GPIO_Pin_0);
+	if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_14) == 0)
 	{
 		Delay(50000);
-		if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) | GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_15) | GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == KEY_OFF)
-		{
-			return -1;
-		}
-	}
-
-	GPIO_SetBits(GPIOC, GPIO_Pin_14);
-	GPIO_ResetBits(GPIOA, GPIO_Pin_1);
-	if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0)
-	{
-		Delay(50000);
-		if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0)
+		if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_14) = 0)
 		{
 			return 1;
 		}
 	}
-	else if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_15) == 0)
+	else if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1) == 0)
 	{
 		Delay(50000);
-		if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_15) == 0)
+		if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1) = 0)
 		{
 			return 2;
 		}
 	}
-	else if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == 0)
+
+	GPIO_SetBits(GPIOC, GPIO_Pin_13);
+	GPIO_ResetBits(GPIOC, GPIO_Pin_15);
+	GPIO_SetBits(GPIOA, GPIO_Pin_0);
+	if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_14) == 0)
 	{
 		Delay(50000);
-		if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == 0)
+		if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_14) = 0)
 		{
 			return 3;
 		}
 	}
-
-	GPIO_ResetBits(GPIOC, GPIO_Pin_14);
-	GPIO_SetBits(GPIOA, GPIO_Pin_1);
-	if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0)
+	else if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1) == 0)
 	{
 		Delay(50000);
-		if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0)
+		if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1) = 0)
 		{
 			return 4;
 		}
 	}
-	else if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_15) == 0)
+
+	GPIO_SetBits(GPIOC, GPIO_Pin_13);
+	GPIO_SetBits(GPIOC, GPIO_Pin_15);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_14) == 0)
 	{
 		Delay(50000);
-		if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_15) == 0)
+		if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_14) = 0)
 		{
 			return 5;
 		}
 	}
-	else if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == 0)
+	else if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1) == 0)
 	{
 		Delay(50000);
-		if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == 0)
+		if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1) = 0)
 		{
 			return 6;
 		}
 	}
+
+	return -1;
 }

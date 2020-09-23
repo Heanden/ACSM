@@ -1,5 +1,0 @@
-Removed Pin From Net: NetName=PA5 Pin=D6-2
-Removed Pin From Net: NetName=PA6 Pin=D7-2
-Added Pin To Net: NetName=PA6 Pin=D6-2
-Added Pin To Net: NetName=PA5 Pin=D7-2
-Added Room: Name=drive
