@@ -1,8 +1,11 @@
 #include "stm32f10x.h"
-#include "key.h"
-#include "leddt.h"
 #include "buzzer.h"
+#include "clock.h"
+#include "key.h"
 #include "led.h"
+#include "leddt.h"
+#include "SysTick.h"
+#include "uln2003.h"
 
 int main(void)
 {
@@ -13,6 +16,9 @@ int main(void)
     int keyValue = 0;
     while (1)
     {
+        clockCount();
+        stopWatchCount();
+
         keyValue = Key_Scan();
         switch (keyValue)
         {
@@ -44,6 +50,19 @@ int main(void)
             enterCommand = 1;
             break;
         default:
+            break;
+        }
+
+        switch (topMenu)
+        {
+        case 1:
+            pushDigital(stopWatch_minTens, stopWatch_minOnes, stopWatch_secTens, stopWatch_secOnes);
+            break;
+        case 2:
+            pushDigital(hourTens, hourOnes, minTens, minOnes);
+            break;
+        case 3:
+            pushDigital(hourTens, hourOnes, minTens, minOnes);
             break;
         }
 

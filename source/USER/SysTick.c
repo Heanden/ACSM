@@ -11,9 +11,6 @@
 #include "SysTick.h"
 
 static __IO u32 TimingDelay;
-__IO u8 secOnes = 0;
-__IO u8 stopWatchMark = 0;
-__IO u8 stopWatch_secOnes = 0;
 
 /*≥ı ºªØ  SysTick*/
 void SysTick_Init(void)
