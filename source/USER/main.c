@@ -7,6 +7,11 @@
 #include "SysTick.h"
 #include "uln2003.h"
 
+__IO u8 clockShow_hourTens = 0;
+__IO u8 clockShow_hourOnes = 0;
+__IO u8 clockShow_minTens = 0;
+__IO u8 clockShow_minOnes = 0;
+
 int main(void)
 {
     int topMenu = 1, setCase = 1, posCase = 1, addCommand = 0, subCommand = 0, enterCommand = 0;
@@ -59,7 +64,7 @@ int main(void)
             pushDigital(stopWatch_minTens, stopWatch_minOnes, stopWatch_secTens, stopWatch_secOnes);
             break;
         case 2:
-            pushDigital(hourTens, hourOnes, minTens, minOnes);
+            pushDigital(clockShow_hourTens, clockShow_hourOnes, clockShow_minTens, clockShow_minOnes);
             break;
         case 3:
             pushDigital(hourTens, hourOnes, minTens, minOnes);
