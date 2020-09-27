@@ -1,9 +1,9 @@
 /*********************
 接线方式:
-IN1 ---- PB13
-IN2 ---- PB14
-IN3 ---- PB15
-IN4 ---- PA8
+IN1 ---- PA3
+IN2 ---- PA2
+IN3 ---- PA1
+IN4 ---- PA0
 +   ---- +5V
 -   ---- GND
 *********************/
@@ -11,40 +11,6 @@ IN4 ---- PA8
 
 uchar phasecw[4] = {0x08, 0x04, 0x02, 0x01};  //正转 电机导通相序 D-C-B-A
 uchar phaseccw[4] = {0x01, 0x02, 0x04, 0x08}; //反转 电机导通相序 A-B-C-D
-
-//io初始化
-void steppingMotorConfig()
-{
-    GPIO_InitTypeDef GPIO_InitStructure;
-
-    /*IN1 ---- PB13*/
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); // 使能PC端口时钟
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
-    GPIO_Init(GPIOB, &GPIO_InitStructure); //初始化PC端口
-
-    /*IN2 ---- PB14*/
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); // 使能PC端口时钟
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_14;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
-    GPIO_Init(GPIOB, &GPIO_InitStructure); //初始化PC端口
-
-    /*IN1 ---- PB15*/
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); // 使能PC端口时钟
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
-    GPIO_Init(GPIOB, &GPIO_InitStructure); //初始化PC端口
-
-    /*IN2 ---- PA8*/
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE); // 使能PC端口时钟
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
-    GPIO_Init(GPIOA, &GPIO_InitStructure); //初始化PC端口
-}
 
 //ms延时函数
 void Delay_xms(uint x)
@@ -72,10 +38,10 @@ void motorTurn(int x)
 
     for (i = 0; i < 4; i++)
     {
-        PB13(phase[i] & 0X08);
-        PB14(phase[i] & 0X04);
-        PB15(phase[i] & 0X02);
-        PA8(phase[i] & 0X01);
+        PA3(phase[i] & 0X08);
+        PA2(phase[i] & 0X04);
+        PA1(phase[i] & 0X02);
+        PA0(phase[i] & 0X01);
         Delay_xms(4); //转速调节
     }
 }

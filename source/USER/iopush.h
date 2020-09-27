@@ -1,9 +1,9 @@
 /*********************
 接线方式:
-IN1 ---- PB13
-IN2 ---- PB14
-IN3 ---- PB15
-IN4 ---- PA8
+IN1 ---- PA3
+IN2 ---- PA2
+IN3 ---- PA1
+IN4 ---- PA0
 +   ---- +5V
 -   ---- GND
 *********************/
@@ -13,49 +13,73 @@ IN4 ---- PA8
 
 #include "stm32f10x.h"
 /*********************拓展端口*********************/
-/*PA5*/
-#define PA5(a)                           \
-    if (a)                               \
-        GPIO_SetBits(GPIOA, GPIO_Pin_5); \
-    else                                 \
-        GPIO_ResetBits(GPIOA, GPIO_Pin_5)
-
-/*PA4*/
-#define PA4(a)                           \
-    if (a)                               \
-        GPIO_SetBits(GPIOA, GPIO_Pin_4); \
-    else                                 \
-        GPIO_ResetBits(GPIOA, GPIO_Pin_4)
-
-/*PA3*/
+/*PA3*/ //IN1
 #define PA3(a)                           \
     if (a)                               \
         GPIO_SetBits(GPIOA, GPIO_Pin_3); \
     else                                 \
         GPIO_ResetBits(GPIOA, GPIO_Pin_3)
 
-/*PA2*/
+/*PA2*/ //IN2
 #define PA2(a)                           \
     if (a)                               \
         GPIO_SetBits(GPIOA, GPIO_Pin_2); \
     else                                 \
         GPIO_ResetBits(GPIOA, GPIO_Pin_2)
 
-/*PA1*/
+/*PA1*/ //IN3
 #define PA1(a)                           \
     if (a)                               \
         GPIO_SetBits(GPIOA, GPIO_Pin_1); \
     else                                 \
         GPIO_ResetBits(GPIOA, GPIO_Pin_1)
 
-/*********************数码管端口*********************/
-/*PB11*/
-#define PB11(a)                           \
-    if (a)                                \
-        GPIO_SetBits(GPIOB, GPIO_Pin_11); \
-    else                                  \
-        GPIO_ResetBits(GPIOB, GPIO_Pin_11)
+/*PA0*/ //IN4
+#define PA0(a)                           \
+    if (a)                               \
+        GPIO_SetBits(GPIOA, GPIO_Pin_0); \
+    else                                 \
+        GPIO_ResetBits(GPIOA, GPIO_Pin_0)
 
+/*PC15*/ //光敏电阻
+#define PC15(a)                           \
+    if (a)                                \
+        GPIO_SetBits(GPIOC, GPIO_Pin_15); \
+    else                                  \
+        GPIO_ResetBits(GPIOC, GPIO_Pin_15)
+
+/*********************数码管端口*********************/
+/*****u2-u3*****/
+/*PC13*/ //clk
+#define PC13(a)                           \
+    if (a)                                \
+        GPIO_SetBits(GPIOC, GPIO_Pin_13); \
+    else                                  \
+        GPIO_ResetBits(GPIOC, GPIO_Pin_13)
+
+/*PC14*/ //data
+#define PC14(a)                           \
+    if (a)                                \
+        GPIO_SetBits(GPIOC, GPIO_Pin_14); \
+    else                                  \
+        GPIO_ResetBits(GPIOC, GPIO_Pin_14)
+
+/*****u4-u5*****/
+/*PB12*/ //clk
+#define PB12(a)                           \
+    if (a)                                \
+        GPIO_SetBits(GPIOB, GPIO_Pin_12); \
+    else                                  \
+        GPIO_ResetBits(GPIOB, GPIO_Pin_12)
+
+/*PA12*/ //data
+#define PA12(a)                           \
+    if (a)                                \
+        GPIO_SetBits(GPIOA, GPIO_Pin_12); \
+    else                                  \
+        GPIO_ResetBits(GPIOA, GPIO_Pin_12)
+
+/*********************蜂鸣器端口*********************/
 /*PB9*/
 #define PB9(a)                           \
     if (a)                               \
@@ -63,91 +87,83 @@ IN4 ---- PA8
     else                                 \
         GPIO_ResetBits(GPIOB, GPIO_Pin_9)
 
-/*********************蜂鸣器端口*********************/
-/*PC15*/
-#define PC15(a)                           \
-    if (a)                                \
-        GPIO_SetBits(GPIOC, GPIO_Pin_15); \
-    else                                  \
-        GPIO_ResetBits(GPIOC, GPIO_Pin_15)
-
 /*********************按键端口*********************/
-/*PA9*/
-#define PA9(a)                           \
+/*PB1*/
+#define PB1(a)                           \
     if (a)                               \
-        GPIO_SetBits(GPIOA, GPIO_Pin_9); \
+        GPIO_SetBits(GPIOB, GPIO_Pin_1); \
     else                                 \
-        GPIO_ResetBits(GPIOA, GPIO_Pin_9)
+        GPIO_ResetBits(GPIOB, GPIO_Pin_1)
 
-/*PA15*/
-#define PA15(a)                           \
-    if (a)                                \
-        GPIO_SetBits(GPIOA, GPIO_Pin_15); \
-    else                                  \
-        GPIO_ResetBits(GPIOA, GPIO_Pin_15)
+/*PB0*/
+#define PB0(a)                           \
+    if (a)                               \
+        GPIO_SetBits(GPIOB, GPIO_Pin_0); \
+    else                                 \
+        GPIO_ResetBits(GPIOB, GPIO_Pin_0)
 
-/*PA12*/
-#define PA12(a)                           \
-    if (a)                                \
-        GPIO_SetBits(GPIOA, GPIO_Pin_12); \
-    else                                  \
-        GPIO_ResetBits(GPIOA, GPIO_Pin_12)
+/*PA5*/
+#define PA5(a)                           \
+    if (a)                               \
+        GPIO_SetBits(GPIOA, GPIO_Pin_5); \
+    else                                 \
+        GPIO_ResetBits(GPIOA, GPIO_Pin_5)
 
-/*PA11*/
-#define PA11(a)                           \
-    if (a)                                \
-        GPIO_SetBits(GPIOA, GPIO_Pin_11); \
-    else                                  \
-        GPIO_ResetBits(GPIOA, GPIO_Pin_11)
+/*PA6*/
+#define PA6(a)                           \
+    if (a)                               \
+        GPIO_SetBits(GPIOA, GPIO_Pin_6); \
+    else                                 \
+        GPIO_ResetBits(GPIOA, GPIO_Pin_6)
 
-/*PA10*/
-#define PA10(a)                           \
-    if (a)                                \
-        GPIO_SetBits(GPIOA, GPIO_Pin_10); \
-    else                                  \
-        GPIO_ResetBits(GPIOA, GPIO_Pin_10)
+/*PA7*/
+#define PA7(a)                           \
+    if (a)                               \
+        GPIO_SetBits(GPIOA, GPIO_Pin_7); \
+    else                                 \
+        GPIO_ResetBits(GPIOA, GPIO_Pin_7)
 
 /*********************LED端口*********************/
-/*PB3*/
-#define PB3(a)                           \
+/*PA4*/
+#define PA4(a)                           \
     if (a)                               \
-        GPIO_SetBits(GPIOB, GPIO_Pin_3); \
+        GPIO_SetBits(GPIOA, GPIO_Pin_4); \
     else                                 \
-        GPIO_ResetBits(GPIOB, GPIO_Pin_3)
+        GPIO_ResetBits(GPIOA, GPIO_Pin_4)
 
-/*PA8*/
-#define PA8(a)                           \
+/*PB2*/
+#define PB2(a)                           \
     if (a)                               \
-        GPIO_SetBits(GPIOA, GPIO_Pin_8); \
+        GPIO_SetBits(GPIOB, GPIO_Pin_2); \
     else                                 \
-        GPIO_ResetBits(GPIOA, GPIO_Pin_8)
+        GPIO_ResetBits(GPIOB, GPIO_Pin_2)
 
-/*PB15*/
-#define PB15(a)                           \
+/*PB10*/
+#define PB10(a)                           \
     if (a)                                \
-        GPIO_SetBits(GPIOB, GPIO_Pin_15); \
+        GPIO_SetBits(GPIOB, GPIO_Pin_10); \
     else                                  \
-        GPIO_ResetBits(GPIOB, GPIO_Pin_15)
+        GPIO_ResetBits(GPIOB, GPIO_Pin_10)
 
-/*PB13*/
-#define PB13(a)                           \
-    if (a)                                \
-        GPIO_SetBits(GPIOB, GPIO_Pin_13); \
-    else                                  \
-        GPIO_ResetBits(GPIOB, GPIO_Pin_13)
+/*PB7*/
+#define PB7(a)                           \
+    if (a)                               \
+        GPIO_SetBits(GPIOB, GPIO_Pin_7); \
+    else                                 \
+        GPIO_ResetBits(GPIOB, GPIO_Pin_7)
 
-/*PB14*/
-#define PB14(a)                           \
+/*PB11*/
+#define PB11(a)                           \
     if (a)                                \
-        GPIO_SetBits(GPIOB, GPIO_Pin_14); \
+        GPIO_SetBits(GPIOB, GPIO_Pin_11); \
     else                                  \
-        GPIO_ResetBits(GPIOB, GPIO_Pin_14)
+        GPIO_ResetBits(GPIOB, GPIO_Pin_11)
 
-/*PB12*/
-#define PB12(a)                           \
-    if (a)                                \
-        GPIO_SetBits(GPIOB, GPIO_Pin_12); \
-    else                                  \
-        GPIO_ResetBits(GPIOB, GPIO_Pin_12)
+/*PB8*/
+#define PB8(a)                           \
+    if (a)                               \
+        GPIO_SetBits(GPIOB, GPIO_Pin_8); \
+    else                                 \
+        GPIO_ResetBits(GPIOB, GPIO_Pin_8)
 
 #endif /* __IOPUSH_H */

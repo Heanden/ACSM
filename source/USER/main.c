@@ -1,11 +1,5 @@
 #include "stm32f10x.h"
-#include "buzzer.h"
-#include "clock.h"
-#include "key.h"
-#include "led.h"
-#include "leddt.h"
-#include "SysTick.h"
-#include "uln2003.h"
+#include "myconfig.h"
 
 __IO u8 clockShow_hourTens = 0;
 __IO u8 clockShow_hourOnes = 0;
@@ -16,8 +10,7 @@ int main(void)
 {
     int topMenu = 1, setCase = 1, posCase = 1, addCommand = 0, subCommand = 0, enterCommand = 0;
     SystemInit();
-    keyConfig();
-    leddtGpioConfig();
+    allConfig();
     int keyValue = 0;
     while (1)
     {

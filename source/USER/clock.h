@@ -2,6 +2,7 @@
 #define __CLOCK_H
 
 #include "stm32f10x.h"
+#include "iopush.h"
 
 __IO u8 secTens = 0;
 __IO u8 minTens = 0;

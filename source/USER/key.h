@@ -2,6 +2,7 @@
 #define __KEY_H
 
 #include "stm32f10x.h"
+#include "iopush.h"
 /*******
  *按键按下标置
  KEY_ON 0
@@ -17,8 +18,6 @@
 #define KEY_SUB 2
 #define KEY_ENTER 1
 
-void Key_GPIO_Config(u16 GPIO_Pin_x, u16 GPIOMode, u32 RCC_APB2Periph_GPIOx, GPIO_TypeDef *GPIOx);
 u8 Key_Scan(void);
-void keyConfig(void);
 
 #endif /* __KEY_H */
