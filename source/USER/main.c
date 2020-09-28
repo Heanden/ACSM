@@ -8,7 +8,8 @@ __IO u8 clockShow_minOnes = 0;
 
 int main(void)
 {
-    u8 numberOne, numberTwo, numberThree, numberFour;
+    int numberOne, numberTwo, numberThree, numberFour;
+    u8 leddtBlinkCase = 0, leddtBlinkCase = 1;
     int topMenu = 1, setCase = 1, posCase = 1, addCommand = 0, subCommand = 0, enterCommand = 0;
     SystemInit();
     allConfig();
@@ -26,12 +27,14 @@ int main(void)
                 topMenu++;
             else
                 topMenu = 1;
+            setCase = 1;
             break;
         case KEY_SET:
             if (setCase < 3)
                 setCase++;
             else
                 setCase = 1;
+            posCase = 1;
             break;
         case KEY_RIGHT:
             if (posCase < 4)
@@ -65,27 +68,52 @@ int main(void)
             break;
         }
 
-        if (topMenu == 3)
+        if (topMenu == 2)
         {
             switch (setCase)
             {
-            case 0:
+            case 1:
+                numberOne = 0;
+                numberTwo = 3;
+                numberThree = -1;
+                numberFour = -1;
+                break;
+            case 2:
                 numberOne = 2;
                 numberTwo = 0;
                 numberThree = 1;
                 numberFour = 7;
                 break;
+            case 3:
+                numberOne = -1;
+                numberTwo = -1;
+                numberThree = 7;
+                numberFour = 2;
+                break;
+            }
+        }
+
+        if (topMenu == 3)
+        {
+            switch (setCase)
+            {
             case 1:
                 numberOne = 0;
-                numberTwo = 1;
-                numberThree = 7;
-                numberFour = 5;
+                numberTwo = 3;
+                numberThree = -1;
+                numberFour = -1;
                 break;
             case 2:
-                numberOne = 1;
-                numberTwo = 7;
-                numberThree = 5;
-                numberFour = 3;
+                numberOne = 2;
+                numberTwo = 0;
+                numberThree = 1;
+                numberFour = 7;
+                break;
+            case 3:
+                numberOne = -1;
+                numberTwo = -1;
+                numberThree = 7;
+                numberFour = 2;
                 break;
             }
         }
