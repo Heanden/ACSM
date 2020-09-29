@@ -1,0 +1,14 @@
+.\myconfig.o: USER\myconfig.c
+.\myconfig.o: USER\myconfig.h
+.\myconfig.o: C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h
+.\myconfig.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\myconfig.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\myconfig.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\myconfig.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\myconfig.o: C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h
+.\myconfig.o: .\USER\stm32f10x_conf.h
+.\myconfig.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
+.\myconfig.o: C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h
+.\myconfig.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\myconfig.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\myconfig.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h

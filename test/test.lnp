@@ -1,0 +1,13 @@
+--cpu Cortex-M3
+".\systick.o"
+".\main.o"
+".\myconfig.o"
+".\uln2003.o"
+".\leddt.o"
+".\key.o"
+".\clock.o"
+".\stm32f10x_it.o"
+--strict --scatter ".\test.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\test.map" -o .\test.axf
