@@ -1,0 +1,15 @@
+.\clock.o: USER\clock.c
+.\clock.o: USER\clock.h
+.\clock.o: USER\iopush.h
+.\clock.o: USER\stm32f10x_conf.h
+.\clock.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
+.\clock.o: C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h
+.\clock.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\clock.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\clock.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\clock.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\clock.o: C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h
+.\clock.o: .\USER\stm32f10x_conf.h
+.\clock.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\clock.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\clock.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h

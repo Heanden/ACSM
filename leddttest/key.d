@@ -1,0 +1,15 @@
+.\key.o: USER\key.c
+.\key.o: USER\key.h
+.\key.o: C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h
+.\key.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\key.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\key.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\key.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\key.o: C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h
+.\key.o: .\USER\stm32f10x_conf.h
+.\key.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
+.\key.o: C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h
+.\key.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\key.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\key.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\key.o: USER\iopush.h

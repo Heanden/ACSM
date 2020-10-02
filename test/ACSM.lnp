@@ -1,0 +1,20 @@
+--cpu Cortex-M3
+".\startup_stm32f10x_md.o"
+".\clock.o"
+".\key.o"
+".\leddt.o"
+".\main.o"
+".\myconfig.o"
+".\stm32f10x_it.o"
+".\systick.o"
+".\uln2003.o"
+".\stm32f10x_exti.o"
+".\stm32f10x_gpio.o"
+".\stm32f10x_rcc.o"
+".\misc.o"
+".\core_cm3.o"
+".\system_stm32f10x.o"
+--strict --scatter ".\ACSM.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\ACSM.map" -o .\ACSM.axf
