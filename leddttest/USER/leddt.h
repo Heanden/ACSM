@@ -3,6 +3,14 @@
 
 #include "stm32f10x.h"
 
+/*********************蜂鸣器端口*********************/
+/*PB9*/
+#define BUZZERCTL(a)                     \
+    if (a)                               \
+        GPIO_SetBits(GPIOB, GPIO_Pin_9); \
+    else                                 \
+        GPIO_ResetBits(GPIOB, GPIO_Pin_9)
+
 /*********************数码管端口*********************/
 /*****u2-u3*****/
 /*PC13*/ //clk

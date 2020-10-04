@@ -8,6 +8,7 @@ SET CPU_CLOCK=0x007A1200
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\main.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\stm32f10x_it.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\systick.__i"
+"C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\key.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\misc.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\stm32f10x_exti.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\stm32f10x_gpio.__i"

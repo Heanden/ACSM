@@ -4,6 +4,7 @@
 ".\main.o"
 ".\stm32f10x_it.o"
 ".\systick.o"
+".\key.o"
 ".\misc.o"
 ".\stm32f10x_exti.o"
 ".\stm32f10x_gpio.o"

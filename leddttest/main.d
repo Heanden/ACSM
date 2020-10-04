@@ -14,3 +14,4 @@
 .\main.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\main.o: USER\stm32f10x_it.h
 .\main.o: USER\SysTick.h
+.\main.o: USER\key.h

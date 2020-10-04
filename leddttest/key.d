@@ -12,4 +12,3 @@
 .\key.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
 .\key.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\key.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
-.\key.o: USER\iopush.h
