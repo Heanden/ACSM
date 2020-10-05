@@ -18,6 +18,8 @@ unsigned int stopwatchHrTensCount = 0;
 unsigned int stopwatchMinOnesCount = 0;
 unsigned int stopwatchMinTensCount = 0;
 
+int keyValue = 1, modeValue = 1, setValue, rightValue, addValue, subValue, enterValue;
+
 /*初始化  SysTick*/
 void SysTick_Init(void)
 {
@@ -46,6 +48,24 @@ void Delay_us(__IO u32 nTime)
 void TimingDelay_Decrement(void) //10us中断一次
 {
   timeInterruptCount++;
+
+  switch (setValue)
+  {
+  case 2:
+    stopwatchInterruptCount++;
+    break;
+  case 3:
+    break;
+  default:
+    stopwatchInterruptCount = 0;
+    stopwatchSecOnesCount = 0;
+    stopwatchSecTensCount = 0;
+    stopwatchHrOnesCount = 0;
+    stopwatchHrTensCount = 0;
+    stopwatchMinOnesCount = 0;
+    stopwatchMinTensCount = 0;
+    break;
+  }
 
   if (TimingDelay != 0x00)
   {

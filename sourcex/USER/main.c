@@ -10,12 +10,11 @@ u8 CCCode[16] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x7
 extern void leddtFirst(u8 leddtHigh, u8 leddtLow);
 extern void leddtSecond(u8 leddtHigh, u8 leddtLow);
 extern void timeCount(void);
+extern void StopwatchCount(void);
 
 int main(void)
 {
-  int keyValue = 1, modeValue = 1, setValue, rightValue, addValue, subValue, enterValue;
   int secOnesTemp, keyTemp = 0;
-  int stopwatchShowFirstHigh, stopwatchShowFirstLow, stopwatchShowSecondHigh, stopwatchShowSecondLow;
   int clocksShowFirstHigh, clocksShowFirstLow, clocksShowSecondHigh, clocksShowSecondLow;
   int infoShowFirstHigh = 0, infoShowFirstLow = 3, infoShowSecondHigh = 7, infoShowSecondLow = 2;
   SystemInit();
@@ -30,18 +29,22 @@ int main(void)
     secOnesTemp = timeSecOnesCount;
     timeCount();
     StopwatchCount();
+    clocksShowFirstHigh = timeMinTensCount;
+    clocksShowFirstLow = timeMinOnesCount;
+    clocksShowSecondHigh = timeSecTensCount;
+    clocksShowSecondLow = timeSecOnesCount;
+
     if (secOnesTemp != timeSecOnesCount)
     {
       switch (modeValue)
       {
       case 1:
-        leddtFirst(CCCode[timeMinTensCount], CCCode[timeMinOnesCount]);
-        leddtSecond(CCCode[timeSecTensCount], CCCode[timeSecOnesCount]);
-
+        leddtFirst(CCCode[stopwatchMinTensCount], CCCode[stopwatchMinOnesCount]);
+        leddtSecond(CCCode[stopwatchSecTensCount], CCCode[stopwatchSecOnesCount]);
         break;
       case 2:
-        leddtFirst(CCCode[2], CCCode[2]);
-        leddtSecond(CCCode[2], CCCode[2]);
+        leddtFirst(CCCode[clocksShowFirstHigh], CCCode[clocksShowFirstLow]);
+        leddtSecond(CCCode[clocksShowSecondHigh], CCCode[clocksShowSecondLow]);
         break;
       case 3:
         leddtSecond(CCCode[infoShowSecondHigh], CCCode[infoShowSecondLow]);
@@ -71,6 +74,14 @@ int main(void)
         LED1(0);
         break;
       case 2:
+        if (setValue < 3)
+        {
+          setValue++;
+        }
+        else
+        {
+          setValue = 1;
+        }
         LED2(0);
         break;
       case 3:
