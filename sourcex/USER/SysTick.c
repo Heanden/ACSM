@@ -5,20 +5,15 @@ static __IO u32 TimingDelay;
 unsigned int timeInterruptCount = 0;
 unsigned int timeSecOnesCount = 0;
 unsigned int timeSecTensCount = 0;
-unsigned int timeHrOnesCount = 0;
-unsigned int timeHrTensCount = 0;
-unsigned int timeMinOnesCount = 0;
-unsigned int timeMinTensCount = 0;
+unsigned int timeHrOnesCount = 5;
+unsigned int timeHrTensCount = 1;
+unsigned int timeMinOnesCount = 6;
+unsigned int timeMinTensCount = 5;
 
-unsigned int stopwatchInterruptCount = 0;
 unsigned int stopwatchSecOnesCount = 0;
 unsigned int stopwatchSecTensCount = 0;
-unsigned int stopwatchHrOnesCount = 0;
-unsigned int stopwatchHrTensCount = 0;
 unsigned int stopwatchMinOnesCount = 0;
 unsigned int stopwatchMinTensCount = 0;
-
-int keyValue = 1, modeValue = 1, setValue, rightValue, addValue, subValue, enterValue;
 
 /*初始化  SysTick*/
 void SysTick_Init(void)
@@ -48,24 +43,6 @@ void Delay_us(__IO u32 nTime)
 void TimingDelay_Decrement(void) //10us中断一次
 {
   timeInterruptCount++;
-
-  switch (setValue)
-  {
-  case 2:
-    stopwatchInterruptCount++;
-    break;
-  case 3:
-    break;
-  default:
-    stopwatchInterruptCount = 0;
-    stopwatchSecOnesCount = 0;
-    stopwatchSecTensCount = 0;
-    stopwatchHrOnesCount = 0;
-    stopwatchHrTensCount = 0;
-    stopwatchMinOnesCount = 0;
-    stopwatchMinTensCount = 0;
-    break;
-  }
 
   if (TimingDelay != 0x00)
   {
@@ -127,14 +104,8 @@ void timeCount(void)
 /*****************************秒表*****************************************/
 void StopwatchCount(void)
 {
-  if (stopwatchInterruptCount > 1000000)
-  {
-    stopwatchInterruptCount = 0;
-    stopwatchSecOnesCount++;
-  }
-
   /******timeSecOnesCount******/
-  if (stopwatchSecOnesCount >= 10)
+  if (stopwatchSecOnesCount > 9)
   {
     stopwatchSecOnesCount = 0;
     stopwatchSecTensCount++;
@@ -148,30 +119,16 @@ void StopwatchCount(void)
   }
 
   /******timeMinOnesCount******/
-  if (stopwatchMinOnesCount >= 10)
+  if (stopwatchMinOnesCount > 9)
   {
     stopwatchMinOnesCount = 0;
     stopwatchMinTensCount++;
   }
 
   /******timeMinTensCount******/
-  if (stopwatchMinTensCount >= 6)
+  if (stopwatchMinTensCount >= 9 && stopwatchMinOnesCount >= 9)
   {
     stopwatchMinTensCount = 0;
-    stopwatchHrOnesCount++;
-  }
-
-  /******timeHrOnesCount******/
-  if (stopwatchHrOnesCount >= 10)
-  {
-    stopwatchHrOnesCount = 0;
-    stopwatchHrTensCount++;
-  }
-
-  /******timeHrTensCount******/
-  if (stopwatchHrOnesCount >= 4 && stopwatchHrTensCount >= 2)
-  {
-    stopwatchHrOnesCount = 0;
-    stopwatchHrTensCount = 0;
+    stopwatchMinOnesCount = 0;
   }
 }

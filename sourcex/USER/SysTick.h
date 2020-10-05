@@ -17,14 +17,9 @@ extern unsigned int timeHrTensCount;
 extern unsigned int timeMinOnesCount;
 extern unsigned int timeMinTensCount;
 
-extern unsigned int stopwatchInterruptCount;
 extern unsigned int stopwatchSecOnesCount;
 extern unsigned int stopwatchSecTensCount;
-extern unsigned int stopwatchHrOnesCount;
-extern unsigned int stopwatchHrTensCount;
 extern unsigned int stopwatchMinOnesCount;
 extern unsigned int stopwatchMinTensCount;
-
-extern int keyValue, modeValue, setValue, rightValue, addValue, subValue, enterValue;
 
 #endif /* __SYSTICK_H */

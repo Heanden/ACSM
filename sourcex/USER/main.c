@@ -14,7 +14,8 @@ extern void StopwatchCount(void);
 
 int main(void)
 {
-  int secOnesTemp, keyTemp = 0;
+  int secOnesTemp, secTensTemp, minOnesTemp, minTensTemp, keyTemp = 0;
+  int keyValue = 1, modeValue = 1, setValue, rightValue, addValue, subValue, enterValue;
   int clocksShowFirstHigh, clocksShowFirstLow, clocksShowSecondHigh, clocksShowSecondLow;
   int infoShowFirstHigh = 0, infoShowFirstLow = 3, infoShowSecondHigh = 7, infoShowSecondLow = 2;
   SystemInit();
@@ -27,6 +28,9 @@ int main(void)
   while (1)
   {
     secOnesTemp = timeSecOnesCount;
+    secTensTemp = timeSecTensCount;
+    minOnesTemp = timeMinOnesCount;
+    minTensTemp = timeMinTensCount;
     timeCount();
     StopwatchCount();
     clocksShowFirstHigh = timeMinTensCount;
@@ -34,8 +38,25 @@ int main(void)
     clocksShowSecondHigh = timeSecTensCount;
     clocksShowSecondLow = timeSecOnesCount;
 
-    if (secOnesTemp != timeSecOnesCount)
+    if (secOnesTemp != timeSecOnesCount || secTensTemp != timeSecTensCount || minOnesTemp != timeMinOnesCount || minTensTemp != timeMinTensCount)
     {
+      if (modeValue == 1)
+      {
+        switch (setValue)
+        {
+        case 2:
+          stopwatchSecOnesCount++;
+          break;
+        case 3:
+          break;
+        default:
+          stopwatchSecOnesCount = 0;
+          stopwatchSecTensCount = 0;
+          stopwatchMinOnesCount = 0;
+          stopwatchMinTensCount = 0;
+          break;
+        }
+      }
       switch (modeValue)
       {
       case 1:
