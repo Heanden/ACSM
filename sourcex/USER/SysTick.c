@@ -3,12 +3,12 @@
 static __IO u32 TimingDelay;
 
 unsigned int timeInterruptCount = 0;
-unsigned int timeSecOnesCount = 0;
-unsigned int timeSecTensCount = 0;
-unsigned int timeHrOnesCount = 5;
-unsigned int timeHrTensCount = 1;
-unsigned int timeMinOnesCount = 6;
-unsigned int timeMinTensCount = 5;
+unsigned int timeSecOnesCount = 2;
+unsigned int timeSecTensCount = 2;
+unsigned int timeHrOnesCount = 2;
+unsigned int timeHrTensCount = 2;
+unsigned int timeMinOnesCount = 2;
+unsigned int timeMinTensCount = 2;
 
 unsigned int stopwatchSecOnesCount = 0;
 unsigned int stopwatchSecTensCount = 0;
