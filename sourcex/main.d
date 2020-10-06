@@ -15,3 +15,4 @@
 .\main.o: USER\stm32f10x_it.h
 .\main.o: USER\SysTick.h
 .\main.o: USER\key.h
+.\main.o: USER\uln2003.h
