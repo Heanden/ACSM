@@ -22,7 +22,7 @@ int main(void)
   int alarmNotesFirstHigh = 1, alarmNotesFirstLow = 5, alarmNotesSecondHigh = 3, alarmNotesSecondLow = 5;
   u8 motorShowFirstHigh = 0, motorShowFirstLow = 0, motorShowSecondHigh = 0, motorShowSecondLow = 0;
   unsigned int blinkMark = 0;
-  int motorMark, motorCtlMark = 1;
+  int motorMark, motorCtlMark = 1, stopwatchClearMark = 1;
   SystemInit();
   SysTick_Init();
   leddtGpioConfig();
@@ -179,13 +179,15 @@ int main(void)
         case 2:
           stopwatchSecOnesCount++;
           break;
-        case 3:
-          break;
         default:
-          stopwatchSecOnesCount = 0;
-          stopwatchSecTensCount = 0;
-          stopwatchMinOnesCount = 0;
-          stopwatchMinTensCount = 0;
+          if (!stopwatchClearMark)
+          {
+            stopwatchSecOnesCount = 0;
+            stopwatchSecTensCount = 0;
+            stopwatchMinOnesCount = 0;
+            stopwatchMinTensCount = 0;
+            stopwatchClearMark = 1;
+          }
           break;
         }
       }
@@ -255,7 +257,7 @@ int main(void)
           setValue = 1;
         }
 
-        if (setValue == 3 && (modeValue == 2 || modeValue == 4))
+        if (setValue == 3 && (modeValue == 2 || modeValue == 4 || modeValue == 1))
         {
           setValue = 1;
         }
@@ -378,6 +380,7 @@ int main(void)
         LED5(0);
         break;
       case 6:
+        stopwatchClearMark = 0;
         if (motorCtlMark < 1)
           motorCtlMark++;
         else
@@ -436,37 +439,37 @@ int main(void)
       case 1:
         motorShowSecondHigh = 0x38;
         PA0(1);
-        Delay_us(8000);
+        Delay_us(4000);
         PA0(0);
 
         PA1(1);
-        Delay_us(8000);
+        Delay_us(4000);
         PA1(0);
 
         PA2(1);
-        Delay_us(8000);
+        Delay_us(4000);
         PA2(0);
 
         PA3(1);
-        Delay_us(8000);
+        Delay_us(4000);
         PA3(0);
         break;
       case 2:
         motorShowSecondHigh = 0x0e;
         PA3(1);
-        Delay_us(8000);
+        Delay_us(4000);
         PA3(0);
 
         PA2(1);
-        Delay_us(8000);
+        Delay_us(4000);
         PA2(0);
 
         PA1(1);
-        Delay_us(8000);
+        Delay_us(4000);
         PA1(0);
 
         PA0(1);
-        Delay_us(8000);
+        Delay_us(4000);
         PA0(0);
         break;
       default:
