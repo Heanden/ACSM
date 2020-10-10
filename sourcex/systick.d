@@ -1,10 +1,8 @@
 .\systick.o: USER\SysTick.c
 .\systick.o: USER\SysTick.h
 .\systick.o: C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h
-.\systick.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\systick.o: .\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
 .\systick.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
-.\systick.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
-.\systick.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
 .\systick.o: C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h
 .\systick.o: .\USER\stm32f10x_conf.h
 .\systick.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h

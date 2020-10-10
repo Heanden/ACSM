@@ -1,10 +1,8 @@
 .\misc.o: Libraries\STM32F10x_StdPeriph_Driver\src\misc.c
 .\misc.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\misc.o: C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h
-.\misc.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\misc.o: .\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
 .\misc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
-.\misc.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
-.\misc.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
 .\misc.o: C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h
 .\misc.o: .\USER\stm32f10x_conf.h
 .\misc.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
