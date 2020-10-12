@@ -2,4 +2,4 @@
 -I C:\Keil\ARM\RV31\INC
 -I C:\Keil\ARM\CMSIS\Include
 -I C:\Keil\ARM\Inc\ST\STM32F10x
--DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o .\misc.o --omf_browse .\misc.crf --depend .\misc.d "Libraries\STM32F10x_StdPeriph_Driver\src\misc.c"
+-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o .\uln2003.o --omf_browse .\uln2003.crf --depend .\uln2003.d "USER\uln2003.c"

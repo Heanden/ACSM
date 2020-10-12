@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER, STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\USER;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc</IncludePath>
+              <IncludePath>.\USER;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\Libraries\CMSIS\CM3\CoreSupport</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -466,6 +466,11 @@
               <FileName>SysTick.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USER\SysTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>uln2003.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\uln2003.c</FilePath>
             </File>
           </Files>
         </Group>

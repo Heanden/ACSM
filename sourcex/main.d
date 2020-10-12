@@ -1,10 +1,8 @@
 .\main.o: USER\main.c
 .\main.o: USER\leddt.h
 .\main.o: C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h
-.\main.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\main.o: .\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
 .\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
-.\main.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
-.\main.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
 .\main.o: C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h
 .\main.o: .\USER\stm32f10x_conf.h
 .\main.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
@@ -15,3 +13,4 @@
 .\main.o: USER\stm32f10x_it.h
 .\main.o: USER\SysTick.h
 .\main.o: USER\key.h
+.\main.o: USER\uln2003.h

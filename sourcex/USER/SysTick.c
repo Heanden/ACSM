@@ -5,10 +5,10 @@ static __IO u32 TimingDelay;
 unsigned int timeInterruptCount = 0;
 unsigned int timeSecOnesCount = 0;
 unsigned int timeSecTensCount = 0;
-unsigned int timeHrOnesCount = 5;
+unsigned int timeHrOnesCount = 4;
 unsigned int timeHrTensCount = 1;
-unsigned int timeMinOnesCount = 6;
-unsigned int timeMinTensCount = 5;
+unsigned int timeMinOnesCount = 3;
+unsigned int timeMinTensCount = 3;
 
 unsigned int stopwatchSecOnesCount = 0;
 unsigned int stopwatchSecTensCount = 0;

@@ -15,5 +15,6 @@ SET CPU_CLOCK=0x007A1200
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\main.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\stm32f10x_it.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\systick.__i"
+"C:\Keil\ARM\ARMCC\bin\ArmCC" --Via ".\uln2003.__i"
 "C:\Keil\ARM\ARMCC\bin\ArmLink" --Via ".\acsm.lnp"
 C:\Keil\ARM\ARMCC\bin\fromelf.exe ".\acsm.axf" --i32combined --output ".\acsm.hex"

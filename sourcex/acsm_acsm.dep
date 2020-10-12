@@ -84,6 +84,7 @@ I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7B744)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x51C7B54A)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x51C7B54A)
 I (C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x51C7AFEA)
+<<<<<<< HEAD
 I (D:\ACSM\sourcex\USER\stm32f10x_conf.h)(0x5F7A9D3F)
 I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x5F7A9D3F)
 I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x5F7A9D3F)
@@ -91,12 +92,22 @@ I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x5
 I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x5F7A9D3F)
 F (.\USER\main.c)(0x5F7B2C54)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\USER -I.\Libraries\CMSIS -I.\Libraries\STM32F10x_StdPeriph_Driver\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o .\main.o --omf_browse .\main.crf --depend .\main.d)
 I (D:\ACSM\sourcex\USER\leddt.h)(0x5F7A9D3F)
+=======
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\stm32f10x_conf.h)(0x5F736F0F)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x5F7131C8)
+F (.\USER\main.c)(0x5F7D0F4E)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\USER -I.\Libraries\CMSIS -I.\Libraries\STM32F10x_StdPeriph_Driver\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\leddt.h)(0x5F79D8A9)
+>>>>>>> d4d15c5c0870ffb6fa5db929a5621cc19a583e0b
 I (C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x51C7AFEA)
 I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x51C7B54A)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7B744)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x51C7B54A)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x51C7B54A)
 I (C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x51C7AFEA)
+<<<<<<< HEAD
 I (D:\ACSM\sourcex\USER\stm32f10x_conf.h)(0x5F7A9D3F)
 I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x5F7A9D3F)
 I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x5F7A9D3F)
@@ -107,12 +118,26 @@ I (D:\ACSM\sourcex\USER\SysTick.h)(0x5F7B2C54)
 I (D:\ACSM\sourcex\USER\key.h)(0x5F7A9D3F)
 F (.\USER\stm32f10x_it.c)(0x5F7A9D3F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\USER -I.\Libraries\CMSIS -I.\Libraries\STM32F10x_StdPeriph_Driver\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o .\stm32f10x_it.o --omf_browse .\stm32f10x_it.crf --depend .\stm32f10x_it.d)
 I (D:\ACSM\sourcex\USER\stm32f10x_it.h)(0x5F7A9D3F)
+=======
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\stm32f10x_conf.h)(0x5F736F0F)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\stm32f10x_it.h)(0x5F76DBE8)
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\SysTick.h)(0x5F7AC60A)
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\key.h)(0x5F78234E)
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\uln2003.h)(0x5F7C40A8)
+F (.\USER\stm32f10x_it.c)(0x5F736F0F)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\USER -I.\Libraries\CMSIS -I.\Libraries\STM32F10x_StdPeriph_Driver\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o .\stm32f10x_it.o --omf_browse .\stm32f10x_it.crf --depend .\stm32f10x_it.d)
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\stm32f10x_it.h)(0x5F76DBE8)
+>>>>>>> d4d15c5c0870ffb6fa5db929a5621cc19a583e0b
 I (C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x51C7AFEA)
 I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x51C7B54A)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7B744)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x51C7B54A)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x51C7B54A)
 I (C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x51C7AFEA)
+<<<<<<< HEAD
 I (D:\ACSM\sourcex\USER\stm32f10x_conf.h)(0x5F7A9D3F)
 I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x5F7A9D3F)
 I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x5F7A9D3F)
@@ -120,6 +145,28 @@ I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x5
 I (D:\ACSM\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x5F7A9D3F)
 F (.\USER\SysTick.c)(0x5F7B2C54)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\USER -I.\Libraries\CMSIS -I.\Libraries\STM32F10x_StdPeriph_Driver\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o .\systick.o --omf_browse .\systick.crf --depend .\systick.d)
 I (D:\ACSM\sourcex\USER\SysTick.h)(0x5F7B2C54)
+=======
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\stm32f10x_conf.h)(0x5F736F0F)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x5F7131C8)
+F (.\USER\SysTick.c)(0x5F7C6D09)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\USER -I.\Libraries\CMSIS -I.\Libraries\STM32F10x_StdPeriph_Driver\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o .\systick.o --omf_browse .\systick.crf --depend .\systick.d)
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\SysTick.h)(0x5F7AC60A)
+I (C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x51C7AFEA)
+I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x51C7B54A)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7B744)
+I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x51C7B54A)
+I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x51C7B54A)
+I (C:\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x51C7AFEA)
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\stm32f10x_conf.h)(0x5F736F0F)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x5F7131C8)
+I (C:\Users\Heang\Documents\acsm\sourcex\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x5F7131C8)
+F (.\USER\uln2003.c)(0x5F7C4191)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\USER -I.\Libraries\CMSIS -I.\Libraries\STM32F10x_StdPeriph_Driver\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o .\uln2003.o --omf_browse .\uln2003.crf --depend .\uln2003.d)
+I (C:\Users\Heang\Documents\acsm\sourcex\USER\uln2003.h)(0x5F7C40A8)
+>>>>>>> d4d15c5c0870ffb6fa5db929a5621cc19a583e0b
 I (C:\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x51C7AFEA)
 I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x51C7B54A)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7B744)
